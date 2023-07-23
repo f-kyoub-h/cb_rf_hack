@@ -1,29 +1,26 @@
-# Цифровой прорыв 2023: Окружной хакатон
+# Цировофой прорыв - сезон ЦФО: Окружной хакатон
 
 ---
-### Кейс: Центральный Банк России
-*Описание*: <br>
-На основе датасета обращений пользователей и результатов устранения нарушений участникам хакатона предлагается создать наукастинг-модель на базе методов машинного обучения, позволяющую выявлять всплески и периодические нарушения в работе ИТ-решений, устанавливать закономерности возникновения нарушений разных ИТ-решений, формировать перечень сбоев и прогноз их реализации в разрезе ИТ-решений.
+### Case: Central Bank RF
+*Description*: <br>
+Purpose of this competition is creation of machine-learning nowcasting-model for anomalities, splashes and periodically breakdowns detection into the IT-sollutions, exploring interruptions regularities by the means of users requests dataset.
 
-### Решение команды GibData:
-*Тизер*: <br>
-Мы предоставляем модель для прогнозирования и поддержки стабильной работы ИТ-решений. Представленное решение позволяет минимизировать ошибки системы с помощью повышения качества классификации запросов засчет выявления в данных аномалий и причин их возникновения. С данным продуктом ЦБ РФ получит возможность более точной оценки потенциальных нарушений, которые могут быть как очевидными, нарушающими работу целого отдела, так и незначительными.
+### GibData sollution:
+*Teaser*: <br>
+For solving this problem we present machine-learning model for predicting and supporting stable IT-sollutions work. Represented model let minimize system's errors by the means of raising quality requires classification with machine-learning model and statistical data processing. With this product, the Central Bank RF will be able to more accurately assess potential violations, which can be both obvious, disrupting the work of an entire department, and minor.
 
-Используемые технологии в рамках реализации проекта: `Python`, `CatBoost`, `SBERT`, `LaBSE`, `Streamlit`.
+Used stack of technologies: `Python`, `CatBoost`, `SBERT`, `LaBSE`, `Streamlit`.
 
-Уникальность нашего решения заключается в создании почвы для автоматизации фиксаций нарушений в системе посредством реализации двух моделей с различными значениями целевых показателей: скорости и эффективности, при этом взаимодействие сотрудника с данной системой сводится к минимуму.
-
-*Решение задачи №1*: <br>
-Разработали два решения для бизнеса на выбор: 
-1) Файл `hard_ml.ipynb` - тяжелое по ресурсам, затратное по времени, но точное по классификации (`CatBoost` + реализовано на нейросетевом подходе (`SBERT` от `SBER`) для выделения информации (эмбеддингов) из текста) <br>
-Файл `get_embeddings.ipynb` - файл с использованием `LaBSE` и `SBERT` для получения эмбеддингов
-3) Директория `web` - быстрое решение, которое можно эффективно интегрировать в бизнес, но с меньшей точностью классификации (реализовано с помощью Open-Source модели `CatBoost` от Yandex)
+*The first task: Model developing*: <br>
+1) File `hard_ml.ipynb` - high-required sollution with high quality of predictions (`CatBoost` + `SBERT` for extracing info (embeddings) from text) <br>
+File `get_embeddings.ipynb` - `LaBSE` and `SBERT` for getting embeddings
+2) Folder `web` - fast sollution for flexible embedding into bisness but a little worse than first sollution by classification quality (Open-Source model `CatBoost` by Yandex)
 
 ![color picker](https://s11.gifyu.com/images/outputvideo-cutter-js.com.gif) <br>
-**Пример работы с веб-интерфейсом**
+**Interface example**
 
-Эмбеддинги для скачивания: https://drive.google.com/drive/folders/1rjfXhDYRegHC_ix4pk0QjcbYis9uvb-Z?usp=share_link
+Embeddings download: https://drive.google.com/drive/folders/1rjfXhDYRegHC_ix4pk0QjcbYis9uvb-Z?usp=share_link
 
-*Решение задач №2-3*:
-Выявили аномалии в данных, распределили на типы. <br>
-Файл `gibdata.ipynb` - файл с исследовательской работой
+*The second and third task: Statistical data processing*: <br>
+In this part of work was held statisic data analysis and processing: anomality classification, exploring distinctive parts between anomalities and common requires. <br>
+File `gibdata.ipynb` - exploring data analysis, feature generation, visual analysis.
